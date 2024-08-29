@@ -1,0 +1,21 @@
+ul li{
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+ /* .headroom-bottom {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 50;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .headroom-bottom.headroom--unpinned {
+    transform: translateY(100%);
+  }
+  
+  .headroom-bottom.headroom--pinned {
+    transform: translateY(0);
+  } 
+   */
