@@ -4,7 +4,7 @@ import {useCreateUserWithEmailAndPassword,useSignInWithEmailAndPassword,
   useSignInWithGoogle,useSignOut,
  } from "react-firebase-hooks/auth";
  import {getAuth, onAuthStateChanged} from 'firebase/auth'
-import {  doc, getDoc, getFirestore,  setDoc,collection } from "firebase/firestore";
+import {  doc, getDoc, getFirestore,  setDoc,collection,addDoc } from "firebase/firestore";
 import {  getStorage, uploadBytes,ref, getDownloadURL } from "firebase/storage";
 import { Allimages } from "../ProductsImages/Allimages";
 

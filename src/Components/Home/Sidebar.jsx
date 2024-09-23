@@ -88,7 +88,7 @@ export const NavBar=()=>{
     <span>
       
     {isLoggedIn?(<span onClick={handleLogOut}><RiLogoutCircleLine className='text-2xl font-bold' /></span>):
-    (<span><AiOutlineLogin className='text-2xl font-bold' /></span>)}  
+    (<span><AiOutlineLogin className='text-2xl font-bold' onClick={()=>navigate('/authentication')} /></span>)}  
     </span>
     </div> 
 

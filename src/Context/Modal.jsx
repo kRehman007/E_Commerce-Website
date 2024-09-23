@@ -23,7 +23,7 @@ const CustomModal = ({ isOpen, onClose, title, img,id,qty=1,price }) => {
   const handleBuyNow=(id,title,qty,img,price)=>{
     if(!isLoggedIn){
       alert('Please login First')
-      navigate('/')
+      
     }
     else{
     setBuyItem(()=>[

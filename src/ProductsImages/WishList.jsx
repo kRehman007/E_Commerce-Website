@@ -10,7 +10,9 @@ import { useDisclosure } from '@chakra-ui/react';
 const WishList = () => {
   
   const { isOpen, onOpen, onClose } = useDisclosure()
-    const {WishItem,RemoveItemsToWish,cartItem,setCartItem,GetDocumentData}=useEcomContext()
+    const {WishItem,RemoveItemsToWish,cartItem,setCartItem,GetDocumentData,
+      setIsWish
+    }=useEcomContext()
     const [ItemList,setIsItemList]=useState('')
     const navigate=useNavigate()
     const [data,setData]=useState([])
@@ -29,9 +31,15 @@ const WishList = () => {
   getData() 
   },[])
   
+  const handleWish=(item)=>{
+    RemoveItemsToWish(item)
+    setIsWish(prev=>({
+      ...prev, 
+      [item.id]:!prev[item.id]
+    }))
+    }
     
     const handleWishList=(item)=>{
-      
       const res=cartItem.find(itemlist=>itemlist.id===item.id)
       if(res){alert('Items has already Added to Cart')}
       else{
@@ -73,7 +81,7 @@ const WishList = () => {
         </Card.Text> 
         
         <div className='text-2xl md:text-3xl cursor-pointer text-white absolute top-5 right-5'
-         onClick={()=>RemoveItemsToWish(item)}><MdDeleteForever /></div>
+         onClick={()=>handleWish(item)}><MdDeleteForever /></div>
       </Card.Body>
    <button className='bg-red-500 text-md w-ful text-white
    py-2' onClick={()=>handleWishList(item)}>Add to Cart</button>   
@@ -100,9 +108,6 @@ const WishList = () => {
         <Card.Text style={{color:'red',fontSize:'17px',fontWeight:'bold'}}>
           ${item.price}
         </Card.Text> 
-        
-        <div className='text-2xl md:text-3xl cursor-pointer text-white absolute top-5 right-5'
-         onClick={()=>RemoveItemsToWish(item)}><MdDeleteForever /></div>
       </Card.Body>
    <button className='bg-red-500 text-md w-ful text-white
    py-2' onClick={()=>handleWishList(item)}>Add to Cart</button>   

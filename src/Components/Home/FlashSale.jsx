@@ -46,23 +46,18 @@ const FlashSale = () => {
  }
   return (
     <>
-  <div className=' flex flex-col space-y-3 justify-center p-3   md:ml-16 mt-11'>
+  <div className=' flex flex-col space-y-3 justify-center p-3  md:ml-16 mt-11'>
 
-  <div className='flex space-x-1 rounded-sm items-center'><div className='w-3 h-[30px] bg-red-600 border-none'></div>
-  <span  className='text-sm text-red-600 font-semibold'>Today's</span></div>
+  <div className='flex space-x-1 rounded-sm items-center pl-1'><div className='w-3 h-[30px] bg-red-600 border-none'></div>
+  <span  className='text-sm text-red-600 font-semibold '>Today's</span></div>
 
-  <div className='flex space-x-5  items-center mb-3'>
+  <div className='flex space-x-5 pl-1 items-center mb-3'>
  <p className='font-bold text-3xl'>Flash Sales</p>
- <div className='flex space-x-3  pr-4 sm:pr-0'>
- <div className='flex flex-col items-center'><p className='text-sm'>Days</p><p className='font-bold'>03</p></div>
- <div className='flex flex-col items-center'><p className='text-sm'>Hours</p><p className='font-bold'>23</p></div>
- <div className='flex flex-col  items-center'><p className='text-sm'>Minutes</p><p className='font-bold'>19</p></div>
- <div className='flex flex-col  items-center'><p className='text-sm'>seconds</p><p className='font-bold'>56</p></div>
  
- </div>
+
   </div>
 
-    <div className='flex flex-wrap gap-3 md:mr-11  lg:grid lg:grid-cols-3 xl:grid xl:grid-cols-4 justify-center items-center overflow-hidden'>
+    <div className='grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 overflow-hidden '>
     {data?.slice(1,5).map((item,index)=>(
     <div  key={index}>
     <Card className='w-[150px] h-[200px] md:w-[260px] md:h-[300px]' >

@@ -70,16 +70,21 @@ const BuyNow = () => {
   };
   
 
-  emailjs.send('service_kr4q6l5', 'template_qb7k6dn', templateParams, '3HIY9RJ1E_KeBYEnf')
+  await emailjs.send('service_kr4q6l5', 'template_qb7k6dn', templateParams, '3HIY9RJ1E_KeBYEnf')
       .then(() => {
-        setisSending(false)
-        alert('Order has been placed successfully')
-        setName('');
-          setCity('');
-          setPlace('');
-          setPhone('');
-          setEmail('');
-          setAddress('');
+        setisSending(prev=>{
+          if(prev){
+            alert('Order has been placed successfully')
+            setName('');
+              setCity('');
+              setPlace('');
+              setPhone('');
+              setEmail('');
+              setAddress('');
+          }
+          else return false
+        })
+        
       }, (err) => {
           alert('Failed to place the order. Please try again.');
       });
