@@ -1,8 +1,8 @@
-ul li{
-    margin-bottom: 20px;
-    cursor: pointer;
+ul li {
+  margin-bottom: 20px;
+  cursor: pointer;
 }
- /* .headroom-bottom {
+/* .headroom-bottom {
     position: fixed;
     left: 0;
     right: 0;

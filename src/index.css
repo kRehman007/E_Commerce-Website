@@ -2,10 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-@media (max-width:400px){
-    .qty{
-       padding-right: 40px;
-       
-
-    }
+@media (max-width: 400px) {
+  .qty {
+    padding-right: 40px;
+  }
 }
