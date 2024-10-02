@@ -19,13 +19,13 @@ import { getStorage, uploadBytes, ref, getDownloadURL } from "firebase/storage";
 import { Allimages } from "../ProductsImages/Allimages";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAk5BYrZPMcL4IEPO5iuVP5cUv6-WJ1PsA",
-  authDomain: "ecommerce-22099.firebaseapp.com",
-  projectId: "ecommerce-22099",
-  storageBucket: "ecommerce-22099.appspot.com",
-  messagingSenderId: "236377403780",
-  appId: "1:236377403780:web:bad905f5fc1cffcfc9edd1",
-  measurementId: "G-N4XX7YTSE6",
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID,
 };
 
 // Initialize Firebase
